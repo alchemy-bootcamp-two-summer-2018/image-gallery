@@ -1,17 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <header>
+      <router-link to="/">Home</router-link>
+      <router-link to="/albums">Albums</router-link>
+      <router-link to="/aboutus">About Us</router-link>
+    </header>
+
+    <router-view></router-view>
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  methods: {
+    handleUpdate(updated) {
+      const index = this.albums.findIndex(album => {
+        return album.id === updated.id;
+      });
+      if(index !== -1) {
+        this.albums.splice(index, 1, updated);
+        this.selectedAlbum = updated;
+      }
+    }
   }
 };
 </script>
