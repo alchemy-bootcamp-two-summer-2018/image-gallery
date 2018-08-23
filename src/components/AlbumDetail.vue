@@ -3,12 +3,12 @@
     <h1>This is one of the many many albums</h1>
 
     <p>
-        <router-link to="/albumdetail/thumbnailviewer"> View a thumb </router-link>
+        <router-link to="/albumdetail/thumbnail"> View a thumb </router-link>
     </p>
 
     <p>
-        <router-link to="/albumdetail/galleryviewer"> View a Gallery </router-link>
-        <router-link to="/albumdetail/listviewer"> View a List of Albums </router-link>
+        <router-link to="/albumdetail/gallery"> View a Gallery </router-link>
+        <router-link to="/albumdetail/list"> View a List of Albums </router-link>
     </p>
 
     <p>
