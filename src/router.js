@@ -16,7 +16,7 @@ export default new VueRouter({
     { path: '/albums', component: Albums },
     { path: '/addalbum', component: AddAlbum },
     { 
-      path: 'albumdetail',
+      path: '/albumdetail',
       component: AlbumDetail,
       children: [
         { path: 'thumbnail', component: ThumbnailViewer },

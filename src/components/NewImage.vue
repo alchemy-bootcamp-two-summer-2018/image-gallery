@@ -1,5 +1,7 @@
 <template>
-    
+    <main>
+        <h1> NEW STUFF </h1>
+    </main>
 </template>
 
 <script>
