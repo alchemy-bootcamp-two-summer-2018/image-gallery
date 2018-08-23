@@ -2,7 +2,9 @@ import VueRouter from 'vue-router';
 import Home from './components/Home.vue';
 import AboutUs from './components/AboutUs.vue';
 import Albums from './components/Albums.vue';
+import AlbumTiles from './components/AlbumTiles.vue';
 import AddAlbum from './components/AddAlbum.vue';
+import AlbumForm from './components/AlbumForm.vue';
 import AlbumDetail from './components/AlbumDetail.vue';
 import ThumbnailViewer from './components/ThumbnailViewer.vue';
 import GalleryViewer from './components/GalleryViewer.vue';
@@ -19,8 +21,14 @@ export default new VueRouter({
     { 
       path: '/albums', 
       component: Albums, 
+      children: [
+        { path: 'tile', component: AlbumTiles },
+        { path: '', redirect: 'tile' }
+      ]
     },
-    { path: '/albums/new', component: AddAlbum },
+    { path: '/albums/new', component: AddAlbum,
+      children: [{ path: 'form', component: AlbumForm }]
+    },
     { path: 'albums/:id', component: AlbumDetail,
       children: [
         { path: 'thumbnail', component: ThumbnailViewer },

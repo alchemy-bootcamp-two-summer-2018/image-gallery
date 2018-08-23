@@ -1,4 +1,5 @@
 import data from './data';
+import shortid from 'shortid';
 import albums from '../assets/albumData.js';
 
 if(!data.albums) {
@@ -13,6 +14,8 @@ export default {
     return data.albums.find(album => album.id === id);
   },
   addAlbum(album) {
+    album.id = album.title;
+    // album.id = shortid.generate();
     data.albums.push(album);
     return album;
   },
