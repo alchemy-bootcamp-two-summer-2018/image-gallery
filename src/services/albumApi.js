@@ -45,5 +45,8 @@ const albums = [
 export default {
   getAlbums() {
     return albums;
+  },
+  getAlbum(key) {
+    return albums.find(album => album.key === key);
   }
 };

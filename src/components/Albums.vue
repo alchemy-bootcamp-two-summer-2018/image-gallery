@@ -1,6 +1,10 @@
 <template>
   <main>
     <h1>Albums</h1>
+    <Album v-for="album in albums"
+      :key="album.key"
+      :album="album"
+    />
   </main>
 </template>
 
