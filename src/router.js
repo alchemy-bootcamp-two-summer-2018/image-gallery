@@ -1,6 +1,6 @@
+import VueRouter from '../node_modules/vue-router';
 import Home from './components/Home.vue';
 import About from './components/About.vue';
-import VueRouter from '../node_modules/vue-router';
 import Albums from './components/Albums.vue';
 import AddAlbum from './components/AddAlbum.vue';
 import AlbumDetail from './components/AlbumDetail.vue';
