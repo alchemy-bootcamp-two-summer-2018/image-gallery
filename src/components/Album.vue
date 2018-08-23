@@ -8,6 +8,9 @@
 </template>
 
 <script>
+
+import Album from './Album';
+
 export default {
   props: {
     album: Object,
