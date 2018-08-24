@@ -1,6 +1,6 @@
 <template>
   <li class="">
-        <ImageItem v-if="album"
+        <ListItem v-if="album"
         v-for="image in album.images"
         :key="image.url"
         :image="image"
@@ -17,11 +17,13 @@ export default {
     album: Object
   },
   components: {
-   ListItem
+    ListItem
   }
 };
 </script>
 
 <style>
-
+li  {
+  list-style: none;
+}
 </style>

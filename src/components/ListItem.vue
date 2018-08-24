@@ -1,7 +1,8 @@
 <template>
   <div class="list-item">
-   <h3>{{ album.title }}</h3>
-      <p>Description: {{ album.description }}</p>
+   <h3>{{ image.title }}</h3>
+      <p>{{ image.description }}</p>
+      <p>{{ image.url}}</p>
   </div>
 </template>
 
@@ -16,12 +17,22 @@ export default {
 </script>
 
 <style scoped>
+
 li {
-  list-style: none;
-  text-align: center;
-  border: 1px solid #aaa;
+    list-style: none;
 }
-img {
-  height: 200px;
+
+.list-item {
+    display: flex;
+    flex-direction:column;
+    padding:20px;
 }
+
+h3 {
+    text-align: left;
+}
+p {
+    text-align: left;
+}
+
 </style>
