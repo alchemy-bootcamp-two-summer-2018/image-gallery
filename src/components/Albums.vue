@@ -1,6 +1,7 @@
 <template>
   <main>
     <h1>Albums</h1>
+    <router-link class="router-link" to="/albums/new">Add An Album</router-link>
     <Album v-for="album in albums"
       :key="album.key"
       :album="album"

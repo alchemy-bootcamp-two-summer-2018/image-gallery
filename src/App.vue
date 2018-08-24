@@ -3,9 +3,9 @@
     <header>
       <h1>Cute Animals</h1>
       <div>
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/albums">Albums</router-link>
+        <router-link class="router-link" to="/">Home</router-link>
+        <router-link class="router-link" to="/about">About</router-link>
+        <router-link class="router-link" to="/albums">Albums</router-link>
       </div>
     </header>
 

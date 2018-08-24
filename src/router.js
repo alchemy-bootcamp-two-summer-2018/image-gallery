@@ -5,10 +5,12 @@ import Thumbnail from './components/Thumbnail.vue';
 import ListViewer from './components/ListViewer.vue';
 import GalleryViewer from './components/GalleryViewer.vue';
 import NewImage from './components/NewImage.vue';
+import AddAlbum from './components/AddAlbum.vue';
 
 export default new VueRouter({
   routes: [
     { path: '/albums', component: Albums },
+    { path: '/albums/new', component: AddAlbum },
     { 
       path: '/albums/:key',
       component: AlbumDetail,
