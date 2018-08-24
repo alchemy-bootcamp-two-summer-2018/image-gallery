@@ -2,11 +2,11 @@
     <main>
         <h1>Albums</h1>
         <Album v-for="album in albums"
-            :key="album.title"
+            :key="album.id"
             :album="album"
         />
-            <router-link :to="`/albums/$`">
-            </router-link>
+            <!-- <router-link :to="`/albums/$`"> -->
+            <!-- </router-link> -->
     </main>
 </template>
 

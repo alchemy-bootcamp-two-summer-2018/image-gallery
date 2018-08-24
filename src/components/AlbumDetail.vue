@@ -2,8 +2,8 @@
     <main>
         <h1>Album Detail</h1>
         <p>{{ album.title }}</p>
-            <router-link :to="`/AlbumDetail/$`">
-            </router-link>
+            <!-- <router-link :to="`/AlbumDetail/$`"> -->
+            <!-- </router-link> -->
     </main>
 </template>
 
@@ -16,7 +16,7 @@ export default {
     };
   },
   created() {
-    this.album = albumsApi.getAlbum(this.$route.params.key);
+    this.album = albumsApi.getAlbum(this.$route.params.id);
   }
 };
 </script>
