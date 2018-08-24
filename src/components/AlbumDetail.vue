@@ -8,7 +8,7 @@
 
     <p>
         <router-link to="gallery"> View a Gallery </router-link>
-        <router-link to="list"> View a List of Albums </router-link>
+        <router-link to="list"> View a List of Images </router-link>
     </p>
 
     <p>
