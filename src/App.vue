@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/albums">Albums</router-link>
-       <router-link to="/addAlbum">AddAlbum</router-link>
+      <router-link to="/addAlbum">AddAlbum</router-link>
+      <router-link to="/AlbumDetail">AlbumDetail</router-link>
     </header>
 
   <router-view></router-view>
