@@ -11,12 +11,19 @@
       </label>
     </p>
     <p>
+      <label>
+        Url: <input v-model="url">
+      </label>
+    </p>
+    <p>
       <button type="submit">Add Image</button>
     </p>
   </form>
 </template>
 
 <script>
+import shortid from 'shortid';
+
 export default {
 
   props:{
@@ -37,7 +44,7 @@ export default {
     handleSubmit() {
       console.log('helleo');
       const image = {
-        id: this.id,
+        id: shortid.generate(),
         title: this.title,
         description: this.description,
         url: this.url,

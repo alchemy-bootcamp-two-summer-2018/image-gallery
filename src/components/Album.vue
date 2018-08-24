@@ -2,7 +2,7 @@
   <li>
     <router-link :to="`/albums/${album.id}`">
       <h3>{{ album.title }}</h3>
-      <p>Description: {{ album.description }}</p>
+      <!-- <p>Description: {{ album.description }}</p> -->
     </router-link>
   </li>
 </template>

@@ -1,7 +1,5 @@
 <template>
   <main>
-    <h1>Home Page</h1>
-    <p> This is our home page. </p>
   </main>
 </template>
 
@@ -24,4 +22,13 @@ export default {};
 a {
   margin: 5px;
 }
+main {
+  background-image: url("/camera.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 600px;
+}
+
+
 </style>

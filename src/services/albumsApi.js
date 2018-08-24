@@ -1,5 +1,5 @@
 import data from './data';
-// import shortid from 'shortid';
+import shortid from 'shortid';
 import albums from '../assets/albumData.js';
 
 if(!data.albums) {
@@ -14,8 +14,7 @@ export default {
     return data.albums.find(album => album.id === id);
   },
   addAlbum(album) {
-    album.id = album.title;
-    // album.id = shortid.generate();
+    album.id = shortid.generate();
     data.albums.push(album);
     return album;
   },
@@ -33,8 +32,8 @@ export default {
   addImage(album, image) {
     album.id = album.title;
     image.id = image.title;
-    // album.id = shortid.generate();
-    data.albums.images.push(image);
+    album.id = shortid.generate();
+    data.album.images.push(image);
     console.log('in api', album);
     return album;
   

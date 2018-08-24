@@ -37,4 +37,16 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+header {
+  padding-bottom: 50px;
+  font-size: 30px;
+
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+  font-family: monospace;
+  padding: 40px;
+}
 </style>

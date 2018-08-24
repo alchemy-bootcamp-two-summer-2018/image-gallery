@@ -19,10 +19,9 @@ export default {
 
   methods: {
     handleAdd(image) {
-      const added = albumsApi.addImage(this.album, image);
-      this.$router.push(`/albums/${added.id}`);
-      console.log('image', image);
-      
+      this.album.images.push(image);
+      albumsApi.updateAlbum(this.album);
+      this.$router.push(`/albums/${this.album.id}`);
     }
   }
 };

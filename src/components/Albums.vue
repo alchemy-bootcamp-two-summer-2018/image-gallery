@@ -8,7 +8,7 @@
         /> 
          <li>
              <h3 class="add-new">
-                 <router-link to="/albums/new">Add a new album</router-link>
+                 <router-link to="/albums/new">Add album</router-link>
              </h3>
          </li>
        </ul>
@@ -58,13 +58,31 @@ ul {
 li {
   list-style: none;
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border: 1px solid #aaa;
+  background-image: url("/camera.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+
 }
 a {
   text-decoration: none;
   color: initial;
 }
 .add-new {
-    margin-top: 60px;
+    margin-top: 5px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
+
+main {
+  background-image: none;
+
+}
+
+
 </style>

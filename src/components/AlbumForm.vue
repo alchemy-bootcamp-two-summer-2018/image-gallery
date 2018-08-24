@@ -32,7 +32,7 @@ export default {
   methods: {
     handleSubmit() {
       const album = {
-        id: this.id,
+        id: this.title,
         title: this.title,
         description: this.description,
         images: this.images

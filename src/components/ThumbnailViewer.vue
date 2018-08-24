@@ -3,7 +3,7 @@
         <ul class="tile-view">
         <ImageItem v-if="album"
         v-for="image in album.images"
-        :key="image.url"
+        :key="image.id"
         :image="image"
         /> 
 
@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
 
-ul.tile-view {
+/* ul.tile-view {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 5px;
@@ -49,5 +49,7 @@ li {
 a {
   text-decoration: none;
   color: initial;
-}
+} */
+
+
 </style>
