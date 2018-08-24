@@ -6,27 +6,20 @@
         :key="image.url"
         :image="image"
         /> 
-       </ul>
 
+       </ul>
     </div>
 </template>
 
 <script>
-import albumsApi from '../services/albumsApi';
 import ImageItem from './ImageItem';
 
 export default {
-  data() {
-    return {
-      album: null
-    };
+  props: {
+    album: Object
   },
   components: {
     ImageItem
-  },
-  created() {
-    this.album = albumsApi.getAlbum(this.$route.params.id);
-    console.log(this.album.images);
   }
 };
 </script>
@@ -46,4 +39,15 @@ ul {
   padding-left: 0;
 }
 
+li {
+  list-style: none;
+  text-align: center;
+  border: 1px solid #aaa;
+  padding-top: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
 </style>

@@ -1,6 +1,7 @@
 <template>
   <main>
     <h1>About Us</h1>
+    <p> This will be our About Us page. </p>
   </main>
 </template>
 

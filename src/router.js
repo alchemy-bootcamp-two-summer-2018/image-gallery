@@ -13,23 +13,20 @@ export default new VueRouter({
   routes: [
     { path: '/', component: Home },
     { 
-      path: '/aboutus', 
-      component: AboutUs, 
+      path: '/aboutus', component: AboutUs, 
     },
     { 
-      path: '/albums', 
-      component: Albums, 
+      path: '/albums', component: Albums, 
     },
     { path: '/albums/new', component: AddAlbum,
-
     },
     { path: '/albums/:id', component: AlbumDetail,
       children: [
-        { path: '/albums/:id/thumbnail', component: ThumbnailViewer },
-        { path: '/albums/:id/gallery', component: GalleryViewer },
-        { path: '/albums/:id/list', component: ListViewer },
-        { path: '/albums/:id/new', component: NewImage },
-        { path: '*', redirect: '/albums/:id/thumbnail' }
+        { path: 'thumbnail', component: ThumbnailViewer },
+        { path: 'gallery', component: GalleryViewer },
+        { path: 'list', component: ListViewer },
+        { path: 'new', component: NewImage },
+        { path: '', redirect: 'thumbnail' }
       ] 
     }
   ]
