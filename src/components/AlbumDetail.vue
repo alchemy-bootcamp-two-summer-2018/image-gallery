@@ -4,6 +4,7 @@
         <p>{{ album.title }}</p>
             <router-link :to="`/AlbumDetail/$`"> 
             </router-link>
+            <img :src="album.image[0].url">
     </main>
 </template>
 
