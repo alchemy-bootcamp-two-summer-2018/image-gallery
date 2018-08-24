@@ -2,6 +2,7 @@ import VueRouter from 'vue-router';
 import Albums from './components/Albums.vue';
 import AlbumDetail from './components/AlbumDetail.vue';
 import Thumbnail from './components/Thumbnail.vue';
+import ListViewer from './components/ListViewer.vue';
 
 export default new VueRouter({
   routes: [
@@ -11,6 +12,7 @@ export default new VueRouter({
       component: AlbumDetail,
       children: [
         { path: 'thumbnail', component: Thumbnail },
+        { path: 'list', component: ListViewer },
         { path: '', redirect: 'thumbnail' }
       ]
     }

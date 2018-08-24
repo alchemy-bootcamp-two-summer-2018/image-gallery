@@ -1,5 +1,5 @@
 <template>
-  <div class="thumbnail-view">
+     <div class="list-view">
       <AlbumImage v-for="image in images"
       :key="image.key"
       :image="image"/>
@@ -8,6 +8,7 @@
 
 <script>
 import AlbumImage from './AlbumImage.vue';
+
 export default {
   props: {
     images: Array
@@ -15,14 +16,14 @@ export default {
   components: {
     AlbumImage
   }
+
 };
 </script>
 
 <style>
 
-.thumbnail-view p {
+.list-view img {
   display: none;
 }
 
 </style>
-
