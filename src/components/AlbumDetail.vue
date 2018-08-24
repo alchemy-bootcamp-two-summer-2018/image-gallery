@@ -1,17 +1,13 @@
 <template>
     <div class="detail-nav">
         <section v-if="album">
-        <router-link to="`/albums/${album.id}/thumbnail`">Thumbnail View</router-link>
-        <router-link to="`/albums/${album.id}/gallery`">Gallery View</router-link>
-        <router-link to="`/albums/${album.id}/list`">List View</router-link>
+        <router-link to="thumbnail">Thumbnail View</router-link>
+        <router-link to="gallery">Gallery View</router-link>
+        <router-link to="list">List View</router-link>
+        <router-link to="new">Add New Image</router-link>
 
         <h3>Album Title: {{ album.title }}</h3>
         <p>Album Description: {{ album.description }}</p>
-
-
-          <h3 class="add-new">
-            <router-link to="`/albums/${album.id}/new`">Add New Image</router-link>  
-          </h3>
   
         <router-view :album="album"></router-view>
         </section>

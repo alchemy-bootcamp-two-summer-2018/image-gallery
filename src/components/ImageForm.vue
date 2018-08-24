@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="handleSubmit">
+  <form @submit.prevent="handleSubmit(album)">
     <p>
       <label>
         Title: <input v-model="title">
@@ -17,13 +17,15 @@
       </label>
     </p>
     <p>
-      <button type="submit">{{ isNew ? 'Add' : 'Update' }}</button>
+      <button type="submit">Add</button>
       <button v-if="onCancel" type="button" @click="onCancel">Cancel</button>
     </p>
   </form>
 </template>
 
 <script>
+// import shortid from 'shortid';
+
 export default {
   props: {
     album: Object,
@@ -38,33 +40,17 @@ export default {
       url: '',
     };
   },
-  computed: {
-    isNew() {
-      return this.image === undefined;
-    }
-  },
-  created() {
-    const image = this.image;
-    if(this.isNew) return;
-
-    this.id = image.id;
-    this.title = image.title;
-    this.description = image.description;
-    this.url = image.url;
-  },
   methods: {
-    handleSubmit() {
+    handleSubmit(album) {
       const image = {
-        id: this.id,
+        id: this.title,
+        // album.id = shortid.generate();
         title: this.title,
         description: this.description,
         url: this.url
       };
-      if(!this.isNew) {
-        image.id = this.image.id;
-      }
-
-      this.onComplete(image);
+      album.images.push(image);
+      this.onComplete(album);
     }
   }
 };
