@@ -1,16 +1,26 @@
 <template>
-  <div>
-   Hello
-  <img :src="image.url" :alt="image.title" />
+  <div class="image-item">
+    <img :src="image.url" :alt="image.id" />
   </div>
 </template>
 
+<script>
 
+export default {
+  props: {
+    image: Object
+  }
+};
 
-<style>
+</script>
+
+<style scoped>
 li {
   list-style: none;
   text-align: center;
   border: 1px solid #aaa;
+}
+img {
+  height: 200px;
 }
 </style>

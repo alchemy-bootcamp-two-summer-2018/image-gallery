@@ -1,20 +1,14 @@
 <template>
     <div class="detail-nav">
-        <router-link to="/thumbnail">Thumbnail View</router-link>
-        <router-link to="/gallery">Gallery View</router-link>
-        <router-link to="/list">List View</router-link>
-        <router-link to="/new">Add New Image</router-link>
-
         <section v-if="album">
+        <router-link to="`/albums/${album.id}/thumbnail`">Thumbnail View</router-link>
+        <router-link to="`/albums/${album.id}/gallery`">Gallery View</router-link>
+        <router-link to="`/albums/${album.id}/list`">List View</router-link>
+        <router-link to="`/albums/${album.id}/add`">Add New Image</router-link>
+
         <h3>{{ album.title }}</h3>
         <p>{{ album.description }}</p>
-
-        <ul class="tile-view">
-        <ImageItem v-for="image in album.images"
-        :key="image.url"
-        :image="image"
-        /> 
-       </ul>
+        <p>{{ album.id }}</p>
 
         <p>
             <router-link :to="`/albums/${album.id}/edit`">Edit</router-link>
@@ -25,8 +19,8 @@
 </template>
 
 <script>
+import ThumbnailViewer from './ThumbnailViewer';
 import albumsApi from '../services/albumsApi';
-import ImageItem from './ImageItem';
 
 export default {
   data() {
@@ -35,26 +29,17 @@ export default {
     };
   },
   components: {
-    ImageItem
+    ThumbnailViewer
   },
   created() {
     this.album = albumsApi.getAlbum(this.$route.params.id);
     console.log(this.album.images);
+
   }
 };
+
 </script>
 
 <style>
-ul.tile-view {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
-}
 
-ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
-  padding-left: 0;
-}
 </style>
