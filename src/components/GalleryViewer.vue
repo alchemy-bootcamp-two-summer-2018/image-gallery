@@ -2,7 +2,9 @@
     <div class="gallery-view">
         <button @click="nextImage">Next</button>
         <button @click="previousImage">Previous</button>
+        <h3> {{ images[this.index].title }} </h3>
         <img :src="images[this.index].url">
+        <p> {{ images[this.index].description }}</p>
     </div>
 </template>
 
