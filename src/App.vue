@@ -15,9 +15,15 @@
 </template>
 
 <script>
+import albumsApi from './services/albumsApi.js';
 
 export default {
   name: 'app',
+  data() {
+    return {
+      albums: albumsApi.getAlbums(),
+    };
+  },
   components: {
   }
 };

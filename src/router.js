@@ -6,11 +6,11 @@ import AddAlbum from './components/AddAlbum.vue';
 import AlbumDetail from './components/AlbumDetail.vue';
 
 export default new VueRouter ({
-    routes: [
+  routes: [
     { path:'/', component: Home },
     { path:'/about', component: About },
     { path:'/albums', component: Albums },
     { path:'/addAlbum', component: AddAlbum },
     { path:'/AlbumDetail', component: AlbumDetail },
-    ]
+  ]
 });

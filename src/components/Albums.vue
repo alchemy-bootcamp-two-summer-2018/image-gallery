@@ -1,14 +1,28 @@
 <template>
     <main>
         <h1>Albums</h1>
+        <Animal v-for="album in albums"
+            :key="album.title"
+            :album="album"
+        />
             <router-link :to="`/albums/$`">
             </router-link>
     </main>
 </template>
 
 <script>
-export default {
+import albumsApi from '../services/albumsApi';
+import Album from './Album';
 
+export default {
+  data() {
+    return {
+      albums: albumsApi.getAlbums()
+    };
+  },
+  components: {
+    Album
+  },
 };
 </script>
 
