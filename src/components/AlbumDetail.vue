@@ -2,8 +2,8 @@
     <main>
         <h1>Album Detail</h1>
         <p>{{ album.title }}</p>
-            <!-- <router-link :to="`/AlbumDetail/$`"> -->
-            <!-- </router-link> -->
+            <router-link :to="`/AlbumDetail/$`"> 
+            </router-link>
     </main>
 </template>
 
