@@ -26,7 +26,7 @@ const albums = [
   },
   {
     id: 2,
-    title: 'Plate',
+    title: 'Dishes',
     description: 'A circular piece of porcelain.',
     images: [      
       { 
@@ -49,4 +49,12 @@ const albums = [
       }  
     ]
   }
+
+ 
 ];
+
+export default {
+  getAlbums() {
+    return albums;
+  }
+};
