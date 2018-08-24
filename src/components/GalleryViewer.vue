@@ -4,6 +4,7 @@
         :key="image.id"
         :image="image"
         /> 
+      <button v-on:click= "handleClick">Next Image</button>
     </div>
 </template>
 
@@ -19,10 +20,25 @@ export default {
   },
   data() {
     return {
-      image: this.album.images[0]
+      image: this.album.images[0],
+      currentImage: 0
     };
   },
+
+  methods :{
+    handleClick: function(){
+      this.currentImage += 1;
+
+      if(this.currentImage === this.album.images.length) {
+        this.currentImage = 0;
+      }
+      this.image = this.album.images[this.currentImage];
+
+    } 
+
+  }
 };
+
 </script>
 
 <style scoped>

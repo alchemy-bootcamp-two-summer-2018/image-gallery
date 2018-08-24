@@ -1,6 +1,7 @@
 <template>
     <div class="thumbnail">
         <img :src="image.url" :alt="image.id" />
+          
     </div>
 </template>
 
@@ -8,10 +9,14 @@
 
 export default {
   props: {
-    image: Object
+    image: Object,
+  
   },
+
 };
+
 </script>
+
 
 <style scoped>
 
