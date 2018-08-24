@@ -1,5 +1,6 @@
 <template>
-  <AlbumForm :onComplete="handleAdd"/>
+  <AlbumForm :onAdd="handleAdd"
+              :album="album"/>
 </template>
 
 <script>
@@ -7,6 +8,9 @@ import AlbumForm from './AlbumForm.vue';
 import albumsApi from '../services/albumsApi';
 
 export default {
+  props: {
+    album: Object
+  },
   components: {
     AlbumForm
   },

@@ -18,7 +18,6 @@
     </p>
     <p>
       <button type="submit">Add</button>
-      <button v-if="onCancel" type="button" @click="onCancel">Cancel</button>
     </p>
   </form>
 </template>
@@ -29,8 +28,7 @@
 export default {
   props: {
     album: Object,
-    onComplete: Function,
-    onCancel: Function
+    onAdd: Function,
   },
   data() {
     return {
@@ -50,7 +48,7 @@ export default {
         url: this.url
       };
       album.images.push(image);
-      this.onComplete(album);
+      this.onAdd(album);
     }
   }
 };
