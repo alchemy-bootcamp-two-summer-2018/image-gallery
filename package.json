@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "short-id": "0.1.0-1",
+    "shortid": "^2.2.13",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1"
   },

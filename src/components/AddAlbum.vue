@@ -18,10 +18,9 @@
 </template>
 
 <script>
+import albumApi from '../assets/albumApi.js';
+
 export default {  
-  props: {
-    onAdd: Function
-  },
   data() {
     return {
       title: '',
@@ -38,6 +37,11 @@ export default {
 
       this.title = '';
       this.description = '';
+
+    },
+    onAdd(album) {
+      const added = albumApi.addAlbum(album);
+      this.$router.push(`/albums/${added.id}`);
 
     }
   }

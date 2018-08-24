@@ -23,7 +23,7 @@ export default new VueRouter({
     },
     { path: '/addalbum', component: AddAlbum },
     { 
-      path: '/albumdetail',
+      path: '/albums/:id',
       component: AlbumDetail,
       children: [
         { path: 'thumbnail', component: ThumbnailViewer },

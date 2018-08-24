@@ -65,5 +65,8 @@ export default {
     album.id = shortid.generate();
     data.albums.push(album);
     return album;
+  },
+  getAlbum(id) {
+    return data.albums.find(album => album.id === id);
   }
 };
