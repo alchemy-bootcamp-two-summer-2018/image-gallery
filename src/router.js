@@ -10,7 +10,8 @@ export default new VueRouter({
       path: '/albums/:key',
       component: AlbumDetail,
       children: [
-        { path: 'thumbnail', component: Thumbnail }
+        { path: 'thumbnail', component: Thumbnail },
+        { path: '', redirect: 'thumbnail' }
       ]
     }
     

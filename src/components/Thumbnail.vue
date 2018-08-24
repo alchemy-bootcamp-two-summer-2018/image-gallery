@@ -1,6 +1,6 @@
 <template>
 <div class="thumbnail-view">
-    <Image v-for="image in images"
+    <AlbumImage v-for="image in images"
     :key="image.key"
     :image="image"/>
 </div>
