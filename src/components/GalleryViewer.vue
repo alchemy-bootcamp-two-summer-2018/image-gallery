@@ -1,7 +1,7 @@
 <template>
     <div class="gallery-view">
         <button @click="nextImage">Next</button>
-        <button>Previous</button>
+        <button @click="previousImage">Previous</button>
         <img :src="images[this.index].url">
     </div>
 </template>
@@ -23,9 +23,19 @@ export default {
   },
   methods: {
     nextImage() {
-      this.index++;
-      // let image = this.image[nextIndex];
-      console.log('hey im an index', this.index);
+      if(this.index === this.images.length - 1) {
+        return this.index = 0;
+      } else {
+        this.index++;
+      }
+      return this.index;
+    },
+    previousImage() {
+      if(this.index === 0) {
+        return this.index = this.images.length - 1;
+      } else {
+        this.index--;
+      }
       return this.index;
     }
   }
