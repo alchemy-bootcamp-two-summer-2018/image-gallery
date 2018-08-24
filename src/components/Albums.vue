@@ -1,7 +1,7 @@
 <template>
     <main>
         <h1>Albums</h1>
-        <Animal v-for="album in albums"
+        <Album v-for="album in albums"
             :key="album.title"
             :album="album"
         />
