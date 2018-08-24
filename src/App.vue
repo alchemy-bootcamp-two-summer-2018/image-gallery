@@ -1,19 +1,32 @@
 <template>
-  <div id="app">
+  <div class="app">
+    <header>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/albums">Albums</router-link>
+      <router-link to="/addAlbum">AddAlbum</router-link>
+      <router-link to="/AlbumDetail">AlbumDetail</router-link>
+    </header>
+
+  <router-view></router-view>
+    
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import albumsApi from './services/albumsApi.js';
 
 export default {
   name: 'app',
+  data() {
+    return {
+      albums: albumsApi.getAlbums(),
+    };
+  },
   components: {
-    HelloWorld
   }
-}
+};
 </script>
 
 <style>
