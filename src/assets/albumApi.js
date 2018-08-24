@@ -68,5 +68,11 @@ export default {
   },
   getAlbum(id) {
     return data.albums.find(album => album.id === id);
+  },
+  addImage(id, image) {
+    const album = this.getAlbum(id);
+    image.id = shortid.generate();
+    album.images.push(image);
+    return image;
   }
 };
