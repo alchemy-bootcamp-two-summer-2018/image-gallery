@@ -1,16 +1,20 @@
 <template>
 <div class="thumbnail-view">
-    <p v-for="image in images"
+    <Image v-for="image in images"
     :key="image.key"
-    :image="image"></p>
-<div>
+    :image="image"/>
+</div>
 </template>
 
 <script>
+import AlbumImage from './AlbumImage.vue';
 export default {
   props: {
     images: Array
   },
+  components: {
+    AlbumImage
+  }
 };
 </script>
 

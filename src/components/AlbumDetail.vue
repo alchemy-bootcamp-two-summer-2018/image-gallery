@@ -1,7 +1,7 @@
 <template>
   <div v-if="album">
     <h1>{{ album.title }}</h1>
-    <router-link :to="`albums/${album.key}/thumbnail`">Thumbnail</router-link>
+    <router-link :to="`/albums/${album.key}/thumbnail`">Thumbnail</router-link>
     <h2>Description:</h2>
     <p>{{ album.description }}</p>
     <router-view :images="album.images"></router-view>
