@@ -1,5 +1,6 @@
 // import data from '../data';
 import shortid from 'shortid';
+import data from '../data';
 
 // if(!data.albums) {
 let albums = [
@@ -46,5 +47,8 @@ let albums = [
 export default {
   getAlbums() {
     return albums;
+  },
+  getAlbum(id) {
+    return albums.find(album => album.id === id);
   }
 };
