@@ -1,5 +1,5 @@
 import data from './data';
-import shortid from 'shortid';
+// import shortid from 'shortid';
 import albums from '../assets/albumData.js';
 
 if(!data.albums) {
