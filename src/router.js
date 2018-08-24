@@ -6,7 +6,7 @@ import AddAlbum from './components/AddAlbum.vue';
 import AlbumDetail from './components/AlbumDetail.vue';
 import ThumbnailViewer from './components/ThumbnailViewer.vue';
 import GalleryViewer from './components/GalleryViewer.vue';
-import ListViewer from './components/GalleryViewer.vue';
+import ListViewer from './components/ListViewer.vue';
 import NewImage from './components/NewImage.vue';
 import Album from './components/Album.vue';
 
