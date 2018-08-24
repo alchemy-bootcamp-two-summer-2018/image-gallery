@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="handleSubmit(album)">
+  <form @submit.prevent = "handleSubmit">
     <p>
       <label>
         Title: <input v-model="title">
@@ -10,26 +10,20 @@
         Description: <input v-model="description">
       </label>
     </p>
-
-        <p>
-      <label>
-        Url: <input v-model="url">
-      </label>
-    </p>
     <p>
-      <button type="submit">Add</button>
+      <button type="submit">Add Image</button>
     </p>
   </form>
 </template>
 
 <script>
-// import shortid from 'shortid';
-
 export default {
-  props: {
-    album: Object,
+
+  props:{
     onAdd: Function,
+
   },
+
   data() {
     return {
       id: '',
@@ -38,17 +32,18 @@ export default {
       url: '',
     };
   },
+
   methods: {
-    handleSubmit(album) {
+    handleSubmit() {
+      console.log('helleo');
       const image = {
-        id: this.title,
-        // album.id = shortid.generate();
+        id: this.id,
         title: this.title,
         description: this.description,
-        url: this.url
+        url: this.url,
+
       };
-      album.images.push(image);
-      this.onAdd(album);
+      this.onAdd(image);
     }
   }
 };

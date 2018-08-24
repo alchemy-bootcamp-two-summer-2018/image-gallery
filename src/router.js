@@ -7,7 +7,7 @@ import AlbumDetail from './components/AlbumDetail.vue';
 import ThumbnailViewer from './components/ThumbnailViewer.vue';
 import GalleryViewer from './components/GalleryViewer.vue';
 import ListViewer from './components/ListViewer.vue';
-import NewImage from './components/NewImage.vue';
+import AddImage from './components/AddImage.vue';
 
 export default new VueRouter({
   routes: [
@@ -25,7 +25,7 @@ export default new VueRouter({
         { path: 'thumbnail', component: ThumbnailViewer },
         { path: 'gallery', component: GalleryViewer },
         { path: 'list', component: ListViewer },
-        { path: 'new', component: NewImage },
+        { path: 'new', component: AddImage },
         { path: '', redirect: 'thumbnail' }
       ] 
     }

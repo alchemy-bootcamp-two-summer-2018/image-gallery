@@ -19,6 +19,7 @@ export default {
     data.albums.push(album);
     return album;
   },
+
   updateAlbum(updated) {
     const index = data.albums.findIndex(album => {
       return album.id === updated.id;
@@ -27,6 +28,16 @@ export default {
     if(index !== -1) {
       data.albums.splice(index, 1, updated);
     }
+  },
+
+  addImage(album, image) {
+    album.id = album.title;
+    image.id = image.title;
+    // album.id = shortid.generate();
+    data.albums.images.push(image);
+    console.log('in api', album);
+    return album;
+  
   },
 
 };

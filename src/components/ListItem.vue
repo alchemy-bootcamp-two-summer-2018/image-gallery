@@ -22,11 +22,6 @@ li {
     list-style: none;
 }
 
-.list-item {
-    display: flex;
-    flex-direction:column;
-    padding:20px;
-}
 
 h3 {
     text-align: left;
