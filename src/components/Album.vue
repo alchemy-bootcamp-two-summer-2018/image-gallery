@@ -1,7 +1,7 @@
 <template>
-  <li>
+  <li :style="{ backgroundImage:  'url(' + album.images[0].url + ')'  }">
     <router-link :to="`/albums/${album.id}`">
-      <h3>{{ album.title }}</h3>
+      <h3><span class="title-bg">{{ album.title }}</span></h3>
       <!-- <p>Description: {{ album.description }}</p> -->
     </router-link>
   </li>
@@ -37,5 +37,12 @@ a {
 
 .selected {
   background: lightsteelblue;
+}
+
+.title-bg {
+  background: white;
+    padding: 5px;
+    max-width: 80px;
+    text-align: center;
 }
 </style>

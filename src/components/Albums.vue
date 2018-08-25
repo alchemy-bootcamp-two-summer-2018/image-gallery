@@ -29,7 +29,8 @@ import Album from './Album';
 export default {
   data() {
     return {
-      albums: albumsApi.getAlbums()
+      albums: albumsApi.getAlbums(),
+      activeColor: 'green'
     };
   },
   components: {
@@ -61,7 +62,7 @@ li {
   padding-top: 30px;
   padding-bottom: 30px;
   border: 1px solid #aaa;
-  background-image: url("/camera.png");
+  /* background-image: url("/camera.png"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -71,12 +72,6 @@ li {
 a {
   text-decoration: none;
   color: initial;
-}
-.add-new {
-    margin-top: 5px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
 }
 
 main {

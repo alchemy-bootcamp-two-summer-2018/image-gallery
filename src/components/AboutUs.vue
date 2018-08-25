@@ -1,8 +1,9 @@
 <template>
-  <main>
-    <h1>About Us</h1>
-    <p> This will be our About Us page. </p>
-  </main>
+    <div id="about-bg">
+        <div class="text-bg">
+        We are Kayla and Lauren and we like photos.
+        </div>
+    </div>
 </template>
 
 <script>
@@ -10,18 +11,15 @@ export default {};
 
 </script>
 
-<style>
-
-.app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 50px;
+<style scoped>
+.text-bg {
+  background:white;
+}
+#about-bg {
+  background-image: url("/camera.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-a {
-  margin: 5px;
-}
 </style>
