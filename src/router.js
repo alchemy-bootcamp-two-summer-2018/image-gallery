@@ -9,8 +9,10 @@ import AddAlbum from './components/AddAlbum.vue';
 
 export default new VueRouter({
   routes: [
-    { path: '/albums', component: Albums },
-    { path: '/albums/new', component: AddAlbum },
+    { path: '/albums', component: Albums,
+      children: [
+        { path: 'new', component: AddAlbum },
+      ] },
     { 
       path: '/albums/:key',
       component: AlbumDetail,

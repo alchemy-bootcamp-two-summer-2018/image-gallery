@@ -9,7 +9,7 @@
       </div>
     </header>
 
-    <router-view></router-view>
+    <router-view :onAdd="handleAdd"></router-view>
 
   </div>
 </template>
@@ -18,7 +18,11 @@
 
 export default {
   name: 'app',
-  components: {
+  methods: {
+    handleAdd(newAlbum) {
+      this.albums.push(newAlbum);
+      console.log('new album', newAlbum);
+    }
   }
 };
 </script>

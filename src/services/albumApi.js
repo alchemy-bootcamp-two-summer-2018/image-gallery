@@ -51,5 +51,5 @@ export default {
   },
   getAlbum(key) {
     return data.albums.find(album => album.key === key);
-  }
+  },
 };
