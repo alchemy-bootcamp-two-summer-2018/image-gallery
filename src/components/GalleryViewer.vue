@@ -1,10 +1,10 @@
 <template>
-    <ul class="gallery-view">
-        <Album v-for="album in albums"
+    <div class="gallery-view">
+        <img :src="album.image[0].url">
+        <!-- <Album v-for="album in albums"
           :id="album.title"
-          :album="album"
-        />
-    </ul>
+          :album="album" -/> -->
+    </div>
 </template>
 
 <script>

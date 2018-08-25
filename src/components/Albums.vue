@@ -5,8 +5,7 @@
             :key="album.id"
             :album="album"
         />
-            <router-link :to="`/albums/$`"> 
-            </router-link>
+           
     </main>
 </template>
 

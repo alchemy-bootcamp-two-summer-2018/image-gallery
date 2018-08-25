@@ -2,13 +2,18 @@
     <main>
         <h1>Album Detail</h1>
         <p>{{ album.title }}</p>
-            <router-link to="/thumbnail">Thumbnail</router-link>
-            <router-link to="/gallery">Gallery</router-link>
-            <router-link to="/list">List</router-link>
-            <router-link to="/new">New Image</router-link>
+        <nav>
+            <router-link :to="`/albums/${album.id}/thumbnail`">Thumbnail</router-link>
+            <router-link to="gallery">Gallery</router-link>
+            <router-link to="list">List</router-link>
+            <router-link to="new">New Image</router-link>
+        </nav>
+          
+          
+<router-view :album="album"></router-view>
 
-            <img :src="album.image[0].url">
     </main>
+    
 </template>
 
 <script>
@@ -16,7 +21,8 @@ import albumsApi from '../services/albumsApi';
 
 export default {
   data() {
-    return {
+    return { 
+      album: this.album
     };
   },
   created() {
