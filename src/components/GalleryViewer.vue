@@ -41,32 +41,10 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
 
-/* ul.tile-view {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
+img {
+  height: 500px;
 }
-
-ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
-  padding-left: 0;
-}
-
-li {
-  list-style: none;
-  text-align: center;
-  border: 1px solid #aaa;
-  padding-top: 60px;
-}
-
-a {
-  text-decoration: none;
-  color: initial;
-} */
-
 
 </style>
