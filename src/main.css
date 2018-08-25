@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat');
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+#app {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#app h1,
+#app h2,
+#app h3,{
+    font-family: 'Merriweather', serif;
+}
+
+.router-link {
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* blue #B6C8F1
+darker blue #327496
+yellow #FEE895
+light brown #D7C4B6 */

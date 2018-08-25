@@ -1,0 +1,36 @@
+<template>
+  <main>
+    <h1>Albums</h1>
+    <router-link to="/albums/new">Add An Album</router-link>
+    <Album v-for="album in albums"
+      :key="album.key"
+      :album="album"
+    />
+    <router-view :onAdd="addAlbum"></router-view>
+  </main>
+</template>
+
+<script>
+import albumApi from '../services/albumApi.js';
+import Album from './Album.vue';
+export default {
+  data() {
+    return {
+      albums: albumApi.getAlbums()
+    };
+  },
+  components: {
+    Album
+  },
+  methods: {
+    addAlbum(album) {
+      this.albums.push(album);
+      return album;
+    }
+  }
+};
+</script>
+
+<style>
+
+</style>
