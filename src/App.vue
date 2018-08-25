@@ -3,13 +3,13 @@
     <header>
       <h1>Cute Animals</h1>
       <div>
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/albums">Albums</router-link>
+        <router-link class="router-link" to="/">Home</router-link>
+        <router-link class="router-link" to="/about">About</router-link>
+        <router-link class="router-link" to="/albums">Albums</router-link>
       </div>
     </header>
 
-    <router-view></router-view>
+    <router-view :onAdd="handleAdd"></router-view>
 
   </div>
 </template>
@@ -18,7 +18,11 @@
 
 export default {
   name: 'app',
-  components: {
+  methods: {
+    handleAdd(newAlbum) {
+      this.albums.push(newAlbum);
+      console.log('new album', newAlbum);
+    }
   }
 };
 </script>

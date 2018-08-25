@@ -1,10 +1,12 @@
 <template>
   <main>
     <h1>Albums</h1>
+    <router-link to="/albums/new">Add An Album</router-link>
     <Album v-for="album in albums"
       :key="album.key"
       :album="album"
     />
+    <router-view :onAdd="addAlbum"></router-view>
   </main>
 </template>
 
@@ -20,6 +22,12 @@ export default {
   components: {
     Album
   },
+  methods: {
+    addAlbum(album) {
+      this.albums.push(album);
+      return album;
+    }
+  }
 };
 </script>
 

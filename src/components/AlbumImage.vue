@@ -1,7 +1,8 @@
 <template>
     <div>
-        <p>{{ image.title }}</p>
+        <h3>{{ image.title }}</h3>
         <img :src="image.url"/>
+        <p>Image Description: {{ image.description }}</p>
     </div>
 </template>
 
