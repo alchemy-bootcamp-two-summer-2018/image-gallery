@@ -30,7 +30,6 @@ export default {
   },
 
   addImage(album, image) {
-    album.id = album.title;
     image.id = image.title;
     album.id = shortid.generate();
     data.album.images.push(image);

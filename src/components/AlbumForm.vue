@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import shortid from 'shortid';
+
 export default {
   props: {
     onAdd: Function,
@@ -32,12 +34,13 @@ export default {
   methods: {
     handleSubmit() {
       const album = {
-        id: this.title,
+        id: shortid.generate(),
         title: this.title,
         description: this.description,
         images: this.images
       };
       this.onAdd(album);
+      this.$router.push(`/albums/${album.id}/new`);
     }
   }
 };
