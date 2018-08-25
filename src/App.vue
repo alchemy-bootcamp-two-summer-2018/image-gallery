@@ -7,6 +7,11 @@
     </header>
 
     <router-view></router-view>
+
+    <footer> 
+      <img class="heart-image" :src="('/made-with-love.png')" />
+      <p> Made @ alchameny code lab PDX</p>
+    </footer>
     
   </div>
 </template>
@@ -29,24 +34,38 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-header {
-  padding-bottom: 50px;
-  font-size: 30px;
 
+header {
+  padding: 30px;
+  font-size: 15px;
+  background: #181818;
+  text-align: center;
 }
 
 a {
+  font-family: 'Open Sans';
   text-decoration: none;
-  color: initial;
-  font-family: monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   padding: 40px;
+  color: white;
+}
+
+.heart-image {
+  width: 25px;
+  margin-bottom: -5px;
+}
+
+footer {
+  background-color: #181818;
+  text-align: center;
+  margin: 0;
+  padding:20px;
+  color: white;
+  font-family: monospace;
+  letter-spacing: 1px;
+  font-size: 12px;
+
 }
 </style>

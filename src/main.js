@@ -5,6 +5,7 @@ import VueRouter from 'vue-router';
 import App from './App.vue';
 // step #3 import our specfic route map
 import router from './router';
+import './main.css';
 
 Vue.config.productionTip = false;
 // step #2: tell Vue about the VueRouter
