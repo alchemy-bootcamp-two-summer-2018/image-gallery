@@ -6,9 +6,13 @@ import ListViewer from './components/ListViewer.vue';
 import GalleryViewer from './components/GalleryViewer.vue';
 import NewImage from './components/NewImage.vue';
 import AddAlbum from './components/AddAlbum.vue';
+import Home from './components/Home.vue';
+import About from './components/About.vue';
 
 export default new VueRouter({
   routes: [
+    { path: '/', component: Home },
+    { path: '/about', component: About },
     { path: '/albums', component: Albums,
       children: [
         { path: 'new', component: AddAlbum },
