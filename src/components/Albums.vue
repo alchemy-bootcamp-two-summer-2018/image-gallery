@@ -5,12 +5,13 @@
         :key="album.title"
         :album="album"
         /> 
-     
-        <li class="add-new">
+        <li>
             <router-link to="/albums/new">
-             <h2>
-              Add album
-             </h2>
+            <img class="plus-image" :src="('/plus.png')" />
+              <div class="title">
+                <h3>Add album</h3>
+                <p> click here to add a new album of your own </p>
+              </div>
             </router-link>
         </li>
      
@@ -29,7 +30,6 @@ export default {
   data() {
     return {
       albums: albumsApi.getAlbums(),
-      activeColor: 'green'
     };
   },
   components: {
@@ -48,11 +48,37 @@ export default {
   min-height: 600px;
 }
 
-.add-new{
-  background: #fa504d;
-  padding: 20px;
-
+h3{
+  font-family:'Playfair Display';
+  font-size:25px;
+  letter-spacing: 1px;
+  color:white;
+  margin-bottom:0;
+  text-transform: none;
 }
+
+.plus-image {
+  margin-top: 40px;
+}
+
+.title {
+  position: absolute;
+  color:white;  
+  padding: 0px 20px 10px 20px;  
+  bottom: 0px;   
+  bottom: 0px; 
+   
+  }
+
+  p {
+  margin-top: 15px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+}
+
+
 
 ul {
   display: grid;
@@ -63,25 +89,22 @@ ul {
   
 }
 
-li{
-  list-style: none;
-  text-align: center;
+li {
   min-height: 350px;
+  background: #fa504d;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
   transition: all .2s ease-in-out;
+  list-style: none;
+  text-align: center;
+  position: relative;
 
 }
 
 li:hover {
   transform: scale(1.03); 
 }
-
-a {
-  color:#282828;
-}
-
 
 </style>
