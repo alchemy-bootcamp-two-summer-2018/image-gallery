@@ -1,11 +1,13 @@
 <template>
+<div class="gallery-body">
     <div class="gallery">
         <GalleryItem v-if="image"
         :key="image.id"
         :image="image"
         /> 
-      <button v-on:click= "handleClick">Next Image</button>
+      <button class="gallery-button" v-on:click= "handleClick">Next Image<img class="arrow-image" :src="('/arrow.png')" /></button>
     </div>
+</div>
 </template>
 
 <script>
@@ -43,30 +45,34 @@ export default {
 
 <style scoped>
 
-/* ul.tile-view {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
+.gallery-body{
+  padding: 50px 100px 50px 100px;
+  background: #e9e9e9;
 }
 
-ul {
+.arrow-image {
+  margin-bottom:-2px;
+  margin-left:15px;
+  width:20px;
+}
+
+.gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 0px;
   padding-left: 0;
+  justify-content: center;
 }
 
-li {
-  list-style: none;
-  text-align: center;
-  border: 1px solid #aaa;
-  padding-top: 60px;
-}
+.gallery-button {
+  border: none;
+  padding:20px;
+  font-size: 17px;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  letter-spacing: 2px;
 
-a {
-  text-decoration: none;
-  color: initial;
-} */
+}
 
 
 </style>

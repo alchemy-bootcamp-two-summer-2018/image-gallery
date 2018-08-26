@@ -1,6 +1,10 @@
 <template>
+   <div>
+    <div class="albums-title">
+      <h1> Albums </h1>
+    </div>
   <div class="albums-body">
-      <ul class="tile-view">
+     <ul class="tile-view">
         <Album v-for="album in albums"
         :key="album.title"
         :album="album"
@@ -14,11 +18,9 @@
               </div>
             </router-link>
         </li>
-     
        </ul>
-
-    <router-view :albums="albums"></router-view>
-
+    </div>
+     <router-view :albums="albums"></router-view>
   </div>
 </template>
 
@@ -41,11 +43,16 @@ export default {
 
 <style scoped>
 
+.albums-title {
+  background: white;
+  padding: 20px;
+}
+
 .albums-body {
   padding: 50px 100px 50px 100px ;
   background: #e9e9e9;
   text-align:center;
-  min-height: 600px;
+  margin:0;
 }
 
 h3{
@@ -55,6 +62,10 @@ h3{
   color:white;
   margin-bottom:0;
   text-transform: none;
+}
+
+h1 {
+    margin-top: 0px;
 }
 
 .plus-image {
@@ -70,12 +81,12 @@ h3{
    
   }
 
-  p {
+  .title p {
   margin-top: 15px;
   font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+
   color: white;
+  text-align: center !important;
 }
 
 

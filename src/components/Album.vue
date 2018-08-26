@@ -42,11 +42,13 @@ h3{
   margin-bottom:0;
   text-transform: none;
 }
+
 p {
   margin-top: 15px;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-align: center !important;
 }
 
 .title-bg {

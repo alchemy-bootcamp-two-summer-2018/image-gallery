@@ -29,7 +29,7 @@ export default {
   padding: 50px 120px 50px 120px ;
   background: #e9e9e9;
   text-align:center;
-  min-height: 600px;
+  min-height: 500px;
 }
 
 .tile-view {
@@ -39,7 +39,5 @@ export default {
   justify-content: center;
   align-items: stretch;
 } 
-
-
 
 </style>

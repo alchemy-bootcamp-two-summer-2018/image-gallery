@@ -35,37 +35,8 @@ export default {
 
 <style>
 
-header {
-  padding: 30px;
-  font-size: 15px;
-  background: #181818;
-  text-align: center;
+footer p {
+  text-align: center !important;
 }
 
-a {
-  font-family: 'Open Sans';
-  text-decoration: none;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 40px;
-  color: white;
-}
-
-.heart-image {
-  width: 25px;
-  margin-bottom: -5px;
-}
-
-footer {
-  background-color: #181818;
-  text-align: center;
-  margin: 0;
-  padding:20px;
-  color: white;
-  font-family: monospace;
-  letter-spacing: 1px;
-  font-size: 12px;
-
-}
 </style>

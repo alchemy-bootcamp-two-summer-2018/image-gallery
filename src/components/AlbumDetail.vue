@@ -32,23 +32,11 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  
-  font-size: 55px;
-  text-align: center;
-  color: #181818;
-  margin-top:20px;
-  margin-bottom:0;
-}
-p{
-  text-align: center;
-  font-family: 'Open Sans';
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-top:0px;
-  margin-bottom: 20px;
-}
 
+p {
+  text-align: center !important;
+  text-transform: uppercase;
+}
 .detail-nav{
   background: #e9e9e94f;
   padding: 20px;
@@ -58,6 +46,5 @@ p{
   color: black;
   
 }
-
 
 </style>

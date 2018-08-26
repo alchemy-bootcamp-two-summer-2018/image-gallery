@@ -1,6 +1,8 @@
 <template>
-  <ImageForm :onAdd="handleAdd"
-              :image="image"/>
+  <div class="add-image-body">
+    <ImageForm :onAdd="handleAdd"
+                :image="image"/>
+  </div>
 </template>
 
 <script>
@@ -27,6 +29,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
+.add-image-body{
+  background:#e9e9e9;
+  display: flex;
+  justify-content: center;
+  padding: 50px 100px 50px 100px;
+}
+
 
 </style>
