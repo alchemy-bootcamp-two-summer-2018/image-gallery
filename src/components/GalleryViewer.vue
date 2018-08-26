@@ -5,7 +5,8 @@
           :key="image.id"
           :image="image"
           />
-        <button v-on:click="handleClick">Next</button>
+        <button v-on:click="handleNext">Next</button>
+        <button v-on:click="handlePrevious">Previous</button>
     </main>
 </template>
 
@@ -26,11 +27,19 @@ export default {
     };
   },
   methods: {
-    handleClick: function(){
-      this.currentImage += 1;
+    handleNext: function(){
+      this.currentImage ++;
 
       if(this.currentImage === this.album.images.length) {
         this.currentImage = 0;
+      }
+      this.image = this.album.images[this.currentImage];
+    },
+    handlePrevious: function(){
+      this.currentImage --;
+
+      if(this.currentImage < 0) {
+        this.currentImage = (this.album.images.length - 1);
       }
       this.image = this.album.images[this.currentImage];
     }

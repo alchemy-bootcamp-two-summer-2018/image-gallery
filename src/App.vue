@@ -5,7 +5,7 @@
       <router-link to="/About">ABOUT</router-link>
       <router-link to="/albums">ALBUMS</router-link>
       <router-link to="/addalbum">ADD ALBUM</router-link>
-      <router-link to="/albumdetail">ALBUM DETAIL</router-link>
+      <!-- <router-link to="/albumdetail">ALBUM DETAIL</router-link> -->
     </header>
 
     <router-view></router-view>
