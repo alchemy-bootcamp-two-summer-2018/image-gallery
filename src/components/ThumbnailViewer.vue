@@ -1,7 +1,6 @@
 <template>
     <ul class="thumbnail-view"> 
-        Album ThumbnailViewer
-  <img v-for="image in album.image"
+    <img v-for="image in album.image"
             :key="image.id"
             :src="image.url"/>
     </ul>
@@ -21,5 +20,11 @@ export default {
 </script>
 
 <style>
+img {
+  width:200px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 5px;
+}
 
 </style>

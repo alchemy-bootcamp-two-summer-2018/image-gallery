@@ -1,9 +1,9 @@
 <template>
     <ul class="list-view">
-        <Album v-for="album in albums"
-          :key="album.title"
-          :album="album"
-        />
+          <Album v-for="image in album.image "
+          :key="image.id"
+          :src="image.url"
+          />
     </ul>
 </template>
 
@@ -12,7 +12,7 @@ import Album from './Album';
 
 export default {
   props: {
-    albums: Array
+    album: Object
   },
   components: {
     Album

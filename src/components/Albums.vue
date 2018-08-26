@@ -26,5 +26,8 @@ export default {
 </script>
 
 <style>
+main {
+  display:grid;
+}
 
 </style>

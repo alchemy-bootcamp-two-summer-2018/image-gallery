@@ -1,12 +1,20 @@
 <template>
     <main>
         <h1>Album Detail</h1>
-        <p>{{ album.title }}</p>
+        <p class="title">{{ album.title }}</p>
         <nav>
+          <p>
             <router-link :to="`/albums/${album.id}/thumbnail`">Thumbnail</router-link>
+          </p>
+          <p>
             <router-link to="gallery">Gallery</router-link>
+          </p>
+          <p>
             <router-link to="list">List</router-link>
+          </p>
+          <p>
             <router-link to="new">New Image</router-link>
+          </p>
         </nav>
           
           
@@ -31,4 +39,7 @@ export default {
 };
 </script>
 <style>
+.title {
+  font-size: 20px;
+}
 </style>
