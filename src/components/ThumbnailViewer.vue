@@ -1,12 +1,11 @@
 <template>
-    <div class="thumbnail">
+    <div class="thumbnail-body">
         <ul class="tile-view">
         <ImageItem v-if="album"
         v-for="image in album.images"
         :key="image.id"
         :image="image"
         /> 
-
        </ul>
     </div>
 </template>
@@ -26,30 +25,19 @@ export default {
 
 <style scoped>
 
-/* ul.tile-view {
+.thumbnail-body {
+  padding: 50px 120px 50px 120px ;
+  background: #e9e9e9;
+  text-align:center;
+  min-height: 500px;
+}
+
+.tile-view {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
-}
-
-ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
-  padding-left: 0;
-}
-
-li {
-  list-style: none;
-  text-align: center;
-  border: 1px solid #aaa;
-  padding-top: 60px;
-}
-
-a {
-  text-decoration: none;
-  color: initial;
-} */
-
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: stretch;
+} 
 
 </style>

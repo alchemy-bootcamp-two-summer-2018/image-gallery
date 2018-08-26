@@ -16,12 +16,11 @@ export default {
 
 <style scoped>
 
-li {
-  list-style: none;
-  text-align: center;
-  border: 1px solid #aaa;
+.image-item > img {
+  object-fit: cover;
+  max-width: 100%;
+  height: 400px;
+
 }
-img {
-  height: 200px;
-}
+
 </style>

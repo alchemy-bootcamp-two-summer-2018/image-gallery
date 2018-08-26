@@ -1,25 +1,27 @@
 <template>
-  <main>
-    <h2>Albums</h2>
-      <ul class="tile-view">
+   <div>
+    <div class="albums-title">
+      <h1> Albums </h1>
+    </div>
+  <div class="albums-body">
+     <ul class="tile-view">
         <Album v-for="album in albums"
         :key="album.title"
         :album="album"
         /> 
-         <li>
-             <h3 class="add-new">
-                 <router-link to="/albums/new">Add album</router-link>
-             </h3>
-         </li>
+        <li>
+            <router-link to="/albums/new">
+            <img class="plus-image" :src="('/plus.png')" />
+              <div class="title">
+                <h3>Add album</h3>
+                <p> click here to add a new album of your own </p>
+              </div>
+            </router-link>
+        </li>
        </ul>
-    <p>
-      
-    </p>
-
-
-    <router-view :albums="albums"></router-view>
-
-  </main>
+    </div>
+     <router-view :albums="albums"></router-view>
+  </div>
 </template>
 
 <script>
@@ -30,7 +32,6 @@ export default {
   data() {
     return {
       albums: albumsApi.getAlbums(),
-      activeColor: 'green'
     };
   },
   components: {
@@ -42,42 +43,79 @@ export default {
 
 <style scoped>
 
-
-ul.tile-view {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
+.albums-title {
+  background: white;
+  padding: 20px;
 }
+
+.albums-body {
+  padding: 50px 100px 50px 100px ;
+  background: #e9e9e9;
+  text-align:center;
+  margin:0;
+}
+
+h3{
+  font-family:'Playfair Display';
+  font-size:25px;
+  letter-spacing: 1px;
+  color:white;
+  margin-bottom:0;
+  text-transform: none;
+}
+
+h1 {
+    margin-top: 0px;
+}
+
+.plus-image {
+  margin-top: 40px;
+}
+
+.title {
+  position: absolute;
+  color:white;  
+  padding: 0px 20px 10px 20px;  
+  bottom: 0px;   
+  bottom: 0px; 
+   
+  }
+
+  .title p {
+  margin-top: 15px;
+  font-size: 10px;
+
+  color: white;
+  text-align: center !important;
+}
+
+
 
 ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
-  padding-left: 0;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 10px;
+  padding-left:0px;
+  color:#282828;
+  
 }
 
 li {
-  list-style: none;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border: 1px solid #aaa;
-  /* background-image: url("/camera.png"); */
+  min-height: 350px;
+  background: #fa504d;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-
-}
-a {
-  text-decoration: none;
-  color: initial;
-}
-
-main {
-  background-image: none;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
+  transition: all .2s ease-in-out;
+  list-style: none;
+  text-align: center;
+  position: relative;
 
 }
 
+li:hover {
+  transform: scale(1.03); 
+}
 
 </style>

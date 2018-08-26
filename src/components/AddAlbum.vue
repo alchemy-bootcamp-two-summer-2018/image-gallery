@@ -1,6 +1,8 @@
 <template>
-  <AlbumForm :onAdd="handleAdd"
-              :album="album"/>
+  <div class="add-album-body">
+    <AlbumForm :onAdd="handleAdd"
+                :album="album"/>
+  </div>
 </template>
 
 <script>
@@ -25,5 +27,11 @@ export default {
 </script>
 
 <style>
+.add-album-body{
+  background:#e9e9e9;
+  display: flex;
+  justify-content: center;
+  padding: 50px 100px 50px 100px;
+}
 
 </style>
