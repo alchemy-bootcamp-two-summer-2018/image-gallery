@@ -1,14 +1,12 @@
 <template>
-    <div class="gallery-view">
-        <div class ="gallery-flex">
-          <div>
-            <h3> {{ images[this.index].title }} </h3>
-            <img :src="images[this.index].url">
-          </div>
-          <p class="description"> {{ images[this.index].description }}</p>
-          <button class="next" @click="nextImage">Next</button>
+    <div class="gallery-flex">
           <button class="prev" @click="previousImage">Previous</button>
+        <div class ="gallery-image">
+          <h3> {{ images[this.index].title }} </h3>
+          <img :src="images[this.index].url">
+          <p class="description"> {{ images[this.index].description }}</p>
         </div>
+          <button class="next" @click="nextImage">Next</button>
     </div>
 </template>
 
@@ -50,7 +48,42 @@ export default {
 
 <style scoped>
 
+.gallery-image {
+  border: 2px solid bisque;
+  width: 80vw;
+  /* margin: 0 auto; */
+  /* padding-bottom: 30px; */
+}
 
+.gallery-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery-flex {
+  display: flex;
+  width: 100vw;
+  margin-bottom: 40px;
+}
+
+h3,
+p {
+  background-color: rgba(255, 228, 196, 0.322);
+  margin: 0;
+}
+
+p {
+  padding: 20px;
+}
+
+.next,
+.prev {
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  background-color: white;
+  border: white;
+}
 
 
 

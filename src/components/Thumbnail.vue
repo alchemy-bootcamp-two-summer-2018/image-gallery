@@ -50,5 +50,9 @@ export default {
   object-fit: cover;
 }
 
+.thumbnail-view h3 {
+  padding-top: 15px;
+}
+
 </style>
 

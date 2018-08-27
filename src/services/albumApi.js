@@ -74,7 +74,7 @@ if(!data.albums) {
           key: shortid.generate(),
           title: 'Awwww...',
           description: 'Hedgehog to go.',
-          url: 'http://animals.sandiegozoo.org/sites/default/files/2016-09/animals_hero_hedgehog.jpg'
+          url: 'https://static.boredpanda.com/blog/wp-content/uploads/2017/02/cute-hedgehog-photos-7-58930c8af24f3__700.jpg'
         },
         
       ]  
