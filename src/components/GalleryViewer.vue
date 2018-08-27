@@ -22,7 +22,6 @@ export default {
     };
   },
   created() {
-    // this.image = this.images[0];
     this.index = 0;
   },
   methods: {
@@ -44,48 +43,44 @@ export default {
     }
   }
 };
+
 </script>
 
 <style scoped>
 
-.gallery-image {
-  border: 2px solid bisque;
-  width: 80vw;
-  /* margin: 0 auto; */
-  /* padding-bottom: 30px; */
-}
+  .gallery-image {
+    border: 2px solid bisque;
+    width: 80vw;
+  }
 
-.gallery-image img {
-  width: 100%;
-  object-fit: cover;
-}
+  .gallery-image img {
+    width: 100%;
+    object-fit: cover;
+  }
 
-.gallery-flex {
-  display: flex;
-  width: 100vw;
-  margin-bottom: 40px;
-}
+  .gallery-flex {
+    display: flex;
+    width: 100vw;
+    margin-bottom: 40px;
+  }
 
-h3,
-p {
-  background-color: rgba(255, 228, 196, 0.322);
-  margin: 0;
-}
+  h3,
+  p {
+    background-color: rgba(255, 228, 196, 0.322);
+    margin: 0;
+  }
 
-p {
-  padding: 20px;
-}
+  p {
+    padding: 20px;
+  }
 
-.next,
-.prev {
-  margin: 0;
-  padding: 0;
-  width: 10vw;
-  background-color: white;
-  border: white;
-}
-
-
-
+  .next,
+  .prev {
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+    background-color: white;
+    border: white;
+  }
 
 </style>

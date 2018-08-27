@@ -16,20 +16,19 @@ export default {
   components: {
     AlbumImage
   }
-
 };
 </script>
 
 <style>
 
-.list-view img {
-  display: none;
-}
+  .list-view img {
+    display: none;
+  }
 
-.list-view .animal-image {
-  border: 2px solid white;
-  background-color: rgb(218, 214, 214);
-  margin: 0 auto;
-}
+  .list-view .animal-image {
+    border: 2px solid white;
+    background-color: rgb(218, 214, 214);
+    margin: 0 auto;
+  }
 
 </style>

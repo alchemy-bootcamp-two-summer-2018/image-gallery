@@ -9,7 +9,6 @@
     <p class="description">{{ album.description }}</p>
     <router-view :onAdd="handleAdd" :images="album.images"></router-view>
   </div>
-
 </template>
 
 <script>

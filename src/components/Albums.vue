@@ -15,6 +15,7 @@
 <script>
 import albumApi from '../services/albumApi.js';
 import Album from './Album.vue';
+
 export default {
   data() {
     return {
@@ -35,10 +36,10 @@ export default {
 
 <style scoped>
 
-.router-link {
-  display: block;
-  width: fit-content;
-  margin: 20px auto;
-}
+  .router-link {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+  }
 
 </style>
