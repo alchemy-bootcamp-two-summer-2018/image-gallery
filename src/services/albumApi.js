@@ -26,6 +26,19 @@ if(!data.albums) {
           description: 'He\'s beautiful when he\'s sleeping',
           url: 'https://i.chzbgr.com/full/8820513536/hBDD906B6/'
         },
+        {
+          key: shortid.generate(),                
+          title: 'Poof',
+          description: 'Little fluff ball',
+          url: 'https://i.ytimg.com/vi/oH_GHvcF9VM/hqdefault.jpg'
+        },
+        {
+          key: shortid.generate(),                
+          title: 'Basket of Happiness',
+          description: 'Puppy times seven',
+          url: 'https://www.petwave.com/-/media/Images/Center/Care-and-Nutrition/Dog/Puppy/Puppies-in-Basket.ashx'
+        },
+
       ] 
     },
     {
@@ -36,12 +49,12 @@ if(!data.albums) {
         {
           key: shortid.generate(),
           title: 'Hedgehog',
-          description: 'Cute hedgehog',
+          description: 'Cute Hedgehog',
           url: 'https://images.pexels.com/photos/50577/hedgehog-animal-baby-cute-50577.jpeg?auto=compress&cs=tinysrgb&h=350'
         },
         {
           key: shortid.generate(),
-          title: 'Hedgehog with watermelon',
+          title: 'Hedgehog with Watermelon',
           description: 'Perhaps ready for a treat?',
           url: 'https://i.ytimg.com/vi/7TQYnZ9He_Q/maxresdefault.jpg'
         },
