@@ -52,6 +52,14 @@ p {
     color: #327496;
 }
 
+.views {
+    font-size: 1em;
+    display: inline-block;
+    margin: 10px;
+    background-color: rgba(182, 200, 241, 0.219);
+    color: rgb(56, 79, 134);
+  }
+
 .router-link {
     padding: 10px;
     text-decoration: none;
@@ -60,6 +68,10 @@ p {
 .header {
     width: 100vw;
     
+}
+
+.description {
+    text-align: center;
 }
 
 body {

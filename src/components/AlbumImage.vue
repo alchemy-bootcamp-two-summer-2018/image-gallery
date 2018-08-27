@@ -2,7 +2,7 @@
     <div class="animal-image">
         <h3>{{ image.title }}</h3>
         <img :src="image.url"/>
-        <p>Image Description: {{ image.description }}</p>
+        <p class="description">Image Description: {{ image.description }}</p>
     </div>
 </template>
 

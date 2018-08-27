@@ -1,10 +1,14 @@
 <template>
     <div class="gallery-view">
-        <button @click="nextImage">Next</button>
-        <button @click="previousImage">Previous</button>
-        <h3> {{ images[this.index].title }} </h3>
-        <img :src="images[this.index].url">
-        <p> {{ images[this.index].description }}</p>
+        <div class ="gallery-flex">
+          <button class="next" @click="nextImage">Next</button>
+          <button class="prev" @click="previousImage">Previous</button>
+          <div>
+            <h3> {{ images[this.index].title }} </h3>
+            <img :src="images[this.index].url">
+          <div>
+        </div>
+        <p class="description"> {{ images[this.index].description }}</p>
     </div>
 </template>
 
@@ -44,6 +48,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
+
+
 
 </style>

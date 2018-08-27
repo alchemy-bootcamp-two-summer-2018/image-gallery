@@ -1,12 +1,12 @@
 <template>
-  <div v-if="album">
-    <h1>{{ album.title }}</h1>
-    <router-link class="router-link" :to="`/albums/${album.key}/thumbnail`">Thumbnail View</router-link>
-    <router-link class="router-link" :to="`/albums/${album.key}/list`">List View</router-link>
-    <router-link class="router-link" :to="`/albums/${album.key}/gallery`">Gallery View</router-link>
-    <router-link class="router-link" :to="`/albums/${album.key}/new`">Add Image to this Album</router-link>
-    <h2>Album Description:</h2>
-    <p>{{ album.description }}</p>
+  <div class="detail" v-if="album">
+    <h2>Album Title: {{ album.title }}</h2>
+    <router-link class="router-link views" :to="`/albums/${album.key}/thumbnail`">Thumbnail View</router-link>
+    <router-link class="router-link views" :to="`/albums/${album.key}/list`">List View</router-link>
+    <router-link class="router-link views" :to="`/albums/${album.key}/gallery`">Gallery View</router-link>
+    <router-link class="router-link views" :to="`/albums/${album.key}/new`">Add Image to this Album</router-link>
+    <h3>Album Description:</h3>
+    <p class="description">{{ album.description }}</p>
     <router-view :onAdd="handleAdd" :images="album.images"></router-view>
   </div>
 
@@ -34,7 +34,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
+.detail h2 {
+  margin-bottom: 20px;
+}
 
 </style>
 
