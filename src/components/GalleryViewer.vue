@@ -45,12 +45,6 @@ export default {
 
 <style>
 
-<<<<<<< HEAD
-img {
-  height: 500px;
-}
-
-=======
 .gallery-body{
   padding: 50px 100px 50px 100px;
   background: #e9e9e9;
@@ -81,5 +75,4 @@ img {
 }
 
 
->>>>>>> b15a47d240f09074b6f720f763b579558e13ff13
 </style>
