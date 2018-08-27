@@ -10,7 +10,7 @@
     <p>
       <label>
          <input placeholder="*Description" v-model="description" required>
-      </label>`=
+      </label>
     </p>
     <p>
       <button type="submit">Add Album</button>
