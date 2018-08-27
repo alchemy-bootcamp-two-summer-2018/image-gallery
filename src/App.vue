@@ -10,7 +10,7 @@
 
     <footer> 
       <img class="heart-image" :src="('/made-with-love.png')" />
-      <p> Made @ alchameny code lab PDX</p>
+      <p> Made @ alchemy code lab PDX</p>
     </footer>
     
   </div>
