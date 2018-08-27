@@ -1,5 +1,5 @@
 <template>
-        <router-link :to="`/albums/${album.title}`">{{ album.title }}
+        <router-link :to="`/albums/${album.id}`">{{ album.title }}
         </router-link>
 </template>
 

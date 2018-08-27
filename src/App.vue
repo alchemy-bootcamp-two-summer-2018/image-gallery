@@ -5,12 +5,11 @@
       <router-link to="/about">About</router-link>
       <router-link to="/albums">Albums</router-link>
       <router-link to="/addAlbum">AddAlbum</router-link>
-      <router-link to="/AlbumDetail">AlbumDetail</router-link>
+      
     </header>
 
   <router-view></router-view>
     
-    <img alt="Vue logo" src="./assets/logo.png">
   </div>
 </template>
 
@@ -38,4 +37,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
