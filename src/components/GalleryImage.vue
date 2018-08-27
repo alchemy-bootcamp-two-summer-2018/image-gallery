@@ -1,7 +1,11 @@
 <template>
     <div>
         <h3>{{ image.title }}</h3>
-        <img :src="image.url">
+        <img class="gallery-image"
+           :src="image.url">
+        <p>
+          {{ image.description }}
+        </p>
     </div>
 </template>
 
@@ -14,5 +18,8 @@ export default {
 </script>
 
 <style>
+.gallery-image{
+  width: 80%;
+}
 
 </style>
