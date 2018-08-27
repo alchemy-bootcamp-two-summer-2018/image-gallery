@@ -24,5 +24,31 @@ export default {
   display: none;
 }
 
+.thumbnail-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  grid-gap: 20px;
+  margin: 20px;
+}
+
+.animal-image {
+  border: 2px solid bisque;
+  max-width: 500px;
+  background-color: rgb(218, 214, 214);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.animal-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
 </style>
 

@@ -26,4 +26,8 @@ export default {
   display: none;
 }
 
+.list-view {
+  border-color: white;
+}
+
 </style>

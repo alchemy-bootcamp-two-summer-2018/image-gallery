@@ -12,7 +12,6 @@
                 <input v-model="url" placeholder="Image URL">
             </p>
             <button>Add</button>
-            <button type="button">Cancel</button>
         </form>
     </div>
 </template>

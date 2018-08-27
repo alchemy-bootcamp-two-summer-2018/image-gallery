@@ -9,7 +9,6 @@
                 <input v-model="description" placeholder="Image Description">
             </p>
             <button>Add</button>
-            <button type="button">Cancel</button>
         </form>
     </div>
 </template>
@@ -43,7 +42,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
 </style>
 

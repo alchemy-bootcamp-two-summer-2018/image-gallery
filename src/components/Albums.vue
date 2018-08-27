@@ -1,13 +1,15 @@
 <template>
-  <main>
-    <h1>Albums</h1>
-    <router-link to="/albums/new">Add An Album</router-link>
+  <div>
+    <h2>Albums</h2>
+    <div class="albums">
     <Album v-for="album in albums"
       :key="album.key"
       :album="album"
     />
+    <router-link class="router-link link-button" to="/albums/new">Add An Album</router-link>
+    </div>
     <router-view :onAdd="addAlbum"></router-view>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -31,6 +33,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
+.router-link {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+}
 
 </style>
