@@ -1,6 +1,7 @@
 <template>
   <main>
-    <h1>ABOUT ABOUT ABOUT</h1>
+    <h1>The Breakfast Nook.</h1>
+    
 
   </main>
     

@@ -1,9 +1,11 @@
 <template>
     <main>
         <h1>This is a thumb.</h1>
-        <img v-for="image in album.images"
-          :key="image.id"
-          :src="image.url">
+        <div class="img-grid">
+          <img v-for="image in album.images"
+            :key="image.id"
+            :src="image.url">
+        </div>
     </main>
 </template>
 
@@ -21,8 +23,17 @@ export default {
 </script>
 
 <style>
+.img-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto;
+  align-items: center
+  
+}
 img {
   width: 200px;
+  justify-self: center;
+  
 }
 
 </style>

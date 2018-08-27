@@ -1,7 +1,7 @@
 <template>
   <main>
-    <h1>ALBUMZZZZZZ</h1>
-    <ul>
+    <h1>Albums</h1>
+    <ul class="album-grid">
       <Album v-for="album in albums"
         :album="album"
         :key="album.id"
@@ -29,6 +29,9 @@ export default {
 </script>
 
 <style>
+.album-grid{
+  display: grid;
+}
 
 </style>
 z

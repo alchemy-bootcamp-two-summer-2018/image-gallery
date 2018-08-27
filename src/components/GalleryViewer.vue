@@ -1,12 +1,13 @@
 <template>
     <main>
-        <h1>Gallery!</h1>
+        <h1>{{ album.title }}</h1>
         <GalleryImage v-if="image"
           :key="image.id"
           :image="image"
           />
-        <button v-on:click="handleNext">Next</button>
         <button v-on:click="handlePrevious">Previous</button>
+        <button v-on:click="handleNext">Next</button>
+        
     </main>
 </template>
 

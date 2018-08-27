@@ -1,19 +1,21 @@
 <template>
 <main>
-    <h1>This is one of the many many albums</h1>
+    <div class="nav">    
+        <p>
+            <router-link to="thumbnail"> Thumbnails </router-link>
+        </p>
 
-    <p>
-        <router-link to="thumbnail"> View a thumb </router-link>
-    </p>
+        <p>
+            <router-link to="gallery"> Gallery </router-link>
+        </p>
+        <p>
+            <router-link to="list"> Image List</router-link>
+        </p>
 
-    <p>
-        <router-link to="gallery"> View a Gallery </router-link>
-        <router-link to="list"> View a List of Images </router-link>
-    </p>
-
-    <p>
-        <router-link to="newimage"> Add a New Image </router-link>
-    </p>
+        <p>
+            <router-link to="newimage"> Add a New Image </router-link>
+        </p>
+    </div>
 
     <router-view :album="album"></router-view>
   </main>
@@ -38,5 +40,10 @@ export default {
 </script>
 
 <style>
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 </style>
