@@ -7,13 +7,13 @@
             <router-link :to="`/albums/${album.id}/thumbnail`">Thumbnail</router-link>
           </p>
           <p>
-            <router-link to="gallery">Gallery</router-link>
+            <router-link :to="`/albums/${album.id}/gallery`">Gallery</router-link>
           </p>
           <p>
-            <router-link to="list">List</router-link>
+            <router-link :to="`/albums/${album.id}/list`">List</router-link>
           </p>
           <p>
-            <router-link to="new">New Image</router-link>
+            <router-link :to="`/albums/${album.id}/new`">New Image</router-link>
           </p>
         </nav>
           

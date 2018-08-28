@@ -2,6 +2,7 @@
     <ul class="list-view">
           <ListImage v-for="image in album.image"
           :key="image.id"
+          :image="image"
           :src="image.url"
           />
     </ul>

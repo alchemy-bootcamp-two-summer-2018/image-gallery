@@ -1,6 +1,6 @@
 <template>
     <li>
-        <h2>{{ album.title }}</h2>
+        <h2>{{ image.title }}</h2>
         <img :src="image.url"/>
         <p>{{ image.description }}</p>
     </li>
