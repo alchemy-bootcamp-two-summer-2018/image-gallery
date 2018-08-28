@@ -54,14 +54,14 @@ let albums = [
       },
       {
         id: shortid.generate(),
-        title: 'dynamite',
-        description: 'Napoleon and Kip',
+        title: 'cool pets',
+        description: 'Pet Gang',
         url: 'https://i.imgur.com/ZP2B68m.jpg'
       },
       {
         id: shortid.generate(),
-        title: 'bath baby',
-        description: 'never too young to selfie',
+        title: 'pug mug',
+        description: 'cute pug selfie',
         url: 'http://justsomething.co/wp-content/uploads/2014/01/23-funniest-animal-selfies-4.jpg'
       },
     ]
