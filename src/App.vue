@@ -7,10 +7,10 @@
       <router-link to="/addAlbum">AddAlbum</router-link>
       
     </header>
-  <section>
+  <!-- <section>
     <AddAlbum v-bind:onAdd="handleAdd"/>
     <Albums v-bind:albums="albums" v-bind:onRemove="handleRemove"/>
-  </section>
+  </section> -->
   <router-view></router-view>
     
     <img alt="Vue logo" src="./assets/logo.png">
@@ -18,23 +18,18 @@
 </template>
 
 <script>
-import albumsApi from './services/albumsApi.js';
-import AddAlbum from './components/AddAlbum.vue';
+// import albumsApi from './services/albumsApi.js';
+// import AddAlbum from './components/AddAlbum.vue';
 
 export default {
   name: 'app',
-  data() {
-    return {
-      albums: albumsApi.getAlbums(),
-    };
-  },
   components: {
-    AddAlbum,
-    Albums
+    // AddAlbum,
+    // Albums
   },
   methods: {
     handleAdd(album) {
-      this.albums.push(album);
+      
     }
   }
   

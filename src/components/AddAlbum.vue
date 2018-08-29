@@ -1,8 +1,4 @@
 <template>
-<script>
-export default {
-
-};
 <main>
   <h1>Add Album</h1>
         <router-link :to="`/addAlbum/$`">
@@ -27,15 +23,19 @@ export default {
       <button>Add Album</button>
     </p>
   </form>
+  </main>
 </template>
 
 <script>
+import albumsApi from '../services/albumsApi.js';
+
 export default {
   props: {
     onAdd: Function
   },
   data() {
     return {
+      albums: albumsApi.getAlbums(),
       title: '',
       description: '',
       url: ''
@@ -48,7 +48,7 @@ export default {
         description: this.description,
         url: this.url
       };
-      this.onAdd(newAlbum);
+      this.albums.push(newAlbum);
       
       this.title = '';
       this.description = '';
@@ -56,8 +56,6 @@ export default {
     }
   }
 };
-</main>
-</template>
 </script>
 
 <style>
