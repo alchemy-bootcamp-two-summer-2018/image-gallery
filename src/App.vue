@@ -5,26 +5,23 @@
       <router-link to="/about">About</router-link>
       <router-link to="/albums">Albums</router-link>
       <router-link to="/addAlbum">AddAlbum</router-link>
+      <router-link to="/newImage">AddImage</router-link>
       
     </header>
-
+  
   <router-view></router-view>
     
   </div>
 </template>
 
 <script>
-import albumsApi from './services/albumsApi.js';
+
 
 export default {
   name: 'app',
-  data() {
-    return {
-      albums: albumsApi.getAlbums(),
-    };
-  },
   components: {
-  }
+    
+  },
 };
 </script>
 
